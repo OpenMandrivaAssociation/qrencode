@@ -12,6 +12,7 @@ Source0:	http://megaui.net/fukuchi/works/qrencode/%{name}-%{version}.tar.gz
 BuildRequires:	autoconf2.5
 BuildRequires:	libtool
 BuildRequires:	libpng-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 Libqrencode is a C library for encoding data in a QR Code symbol, a kind of 2D
