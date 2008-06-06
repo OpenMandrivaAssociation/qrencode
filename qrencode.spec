@@ -1,15 +1,15 @@
-%define	major 1
+%define	major 3
 %define libname	%mklibname %{name} %{major}
+%define develname %mklibname -d %{name}
 
 Summary:	A C library for encoding data in a QR Code symbol
 Name:		qrencode
-Version:	1.0.2
-Release:	%mkrel 2
+Version:	3.0.3
+Release:	%mkrel 1
 Group:		File tools
-License:	LGPL
+License:	LGPLv2+
 URL:		http://megaui.net/fukuchi/works/qrencode/index.en.html
-Source0:	http://megaui.net/fukuchi/works/qrencode/%{name}-%{version}.tar.gz
-BuildRequires:	autoconf2.5
+Source0:	http://megaui.net/fukuchi/works/qrencode/%{name}-%{version}.tar.bz2
 BuildRequires:	libtool
 BuildRequires:	libpng-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
@@ -30,14 +30,15 @@ symbology that can be scanned by handy terminals such as a mobile phone with
 CCD. The capacity of QR Code is up to 7000 digits or 4000 characters, and is
 highly robustness.
 
-%package -n	%{libname}-devel
+%package -n	%{develname}
 Summary:	Static library and header files for the qrencode library
 Group:		Development/C
 Provides:	%{name}-devel = %{version}
 Provides:	lib%{name}-devel = %{version}
 Requires:	%{libname} = %{version}
+Obsoletes:	%mklibname -d qrencode 1
 
-%description -n	%{libname}-devel
+%description -n	%{develname}
 Libqrencode is a C library for encoding data in a QR Code symbol, a kind of 2D
 symbology that can be scanned by handy terminals such as a mobile phone with
 CCD. The capacity of QR Code is up to 7000 digits or 4000 characters, and is
@@ -46,16 +47,12 @@ highly robustness.
 This package contains the static qrencode library and its header files.
 
 %prep
-
 %setup -q -n %{name}-%{version}
 
 %build
-#sh ./autogen.sh
-
 %configure2_5x \
     --enable-static \
     --enable-shared
-
 make
 
 %install
@@ -73,13 +70,14 @@ make
 %files
 %defattr(-,root,root)
 %{_bindir}/%{name}
+%{_mandir}/man1/*
 
 %files -n %{libname}
 %defattr(-,root,root)
 %doc COPYING ChangeLog NEWS README TODO
-%{_libdir}/*.so.*
+%{_libdir}/*.so.%{major}*
 
-%files -n %{libname}-devel
+%files -n %{develname}
 %defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/*.so
