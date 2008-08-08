@@ -5,7 +5,7 @@
 Summary:	A C library for encoding data in a QR Code symbol
 Name:		qrencode
 Version:	3.0.3
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		File tools
 License:	LGPLv2+
 URL:		http://megaui.net/fukuchi/works/qrencode/index.en.html
