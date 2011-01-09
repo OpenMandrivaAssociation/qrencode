@@ -5,7 +5,7 @@
 Summary:	QR Code encoder into PNG image
 Name:		qrencode
 Version:	3.1.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		File tools
 License:	LGPLv2+
 URL:		http://megaui.net/fukuchi/works/qrencode/index.en.html
@@ -69,14 +69,6 @@ doxygen
 
 # clean
 rm -rf %{buildroot}%{_libdir}/*.la
-
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
 
 %clean
 rm -rf %{buildroot}
