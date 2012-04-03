@@ -4,7 +4,7 @@
 
 Summary:	QR Code encoder into PNG image
 Name:		qrencode
-Version:	3.2.0
+Version:	3.3.0
 Release:	1
 Group:		File tools
 License:	LGPLv2+
