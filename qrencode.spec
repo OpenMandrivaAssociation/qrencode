@@ -5,7 +5,7 @@
 Summary:	QR Code encoder into PNG image
 Name:		qrencode
 Version:	3.4.1
-Release:	1
+Release:	2
 Group:		File tools
 License:	LGPLv2+
 URL:		http://megaui.net/fukuchi/works/qrencode/index.en.html
@@ -20,7 +20,7 @@ QR Code and save as a PNG image.
 
 %package -n	%{libname}
 Summary:	A C library for encoding data in a QR Code symbol
-Group:          System/Libraries
+Group:		System/Libraries
 
 %description -n	%{libname}
 Libqrencode is a C library for encoding data in a QR Code symbol, a kind of 2D
@@ -51,11 +51,13 @@ Standards) X0510:2004 or ISO/IEC 18004.
 This package contains the development files for the qrencode library.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 %configure2_5x \
+	--disable-static \
     --enable-shared
+
 %make
 
 %install
