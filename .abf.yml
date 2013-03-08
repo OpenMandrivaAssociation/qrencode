@@ -1,4 +1,5 @@
 removed_sources:
   qrencode-3.3.0.tar.bz2: 79370bb1f67d62a4dbd989a3ccd0a6ca098ce77d
-sources:
   qrencode-3.4.1.tar.bz2: 7624096854b2ec0421600ad5010c50b62a64b4fe
+sources:
+  qrencode-3.4.2.tar.bz2: f9066b442d001333829538a99fa17275c05248d6
