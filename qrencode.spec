@@ -10,6 +10,7 @@ Group:		File tools
 License:	LGPLv2+
 URL:		http://megaui.net/fukuchi/works/qrencode/index.en.html
 Source0:	http://megaui.net/fukuchi/works/qrencode/%{name}-%{version}.tar.bz2
+Patch0:		qrencode-aarch64.patch
 BuildRequires:	libtool
 BuildRequires:	libpng-devel
 BuildRequires:	doxygen
@@ -52,6 +53,7 @@ This package contains the development files for the qrencode library.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure2_5x \
