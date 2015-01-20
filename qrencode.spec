@@ -4,13 +4,12 @@
 
 Summary:	QR Code encoder into PNG image
 Name:		qrencode
-Version:	3.4.3
-Release:	8
+Version:	3.4.4
+Release:	1
 Group:		File tools
 License:	LGPLv2+
 Url:		http://megaui.net/fukuchi/works/qrencode/index.en.html
-Source0:	http://megaui.net/fukuchi/works/qrencode/%{name}-%{version}.tar.bz2
-Patch0:		qrencode-aarch64.patch
+Source0:	http://megaui.net/fukuchi/works/qrencode/%{name}-%{version}.tar.gz
 BuildRequires:	doxygen
 BuildRequires:	libtool
 BuildRequires:	pkgconfig(libpng)
@@ -46,7 +45,7 @@ This package contains the development files for the qrencode library.
 %apply_patches
 
 %build
-%configure2_5x \
+%configure \
 	--disable-static \
 	--enable-shared
 
