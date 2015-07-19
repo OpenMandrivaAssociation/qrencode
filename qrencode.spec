@@ -5,7 +5,7 @@
 Summary:	QR Code encoder into PNG image
 Name:		qrencode
 Version:	3.4.4
-Release:	1
+Release:	2
 Group:		File tools
 License:	LGPLv2+
 Url:		http://megaui.net/fukuchi/works/qrencode/index.en.html
