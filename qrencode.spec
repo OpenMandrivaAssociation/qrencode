@@ -1,6 +1,7 @@
 %define major 3
 %define libname %mklibname %{name} %{major}
 %define devname %mklibname -d %{name}
+%define _disable_rebuild_configure 1
 
 Summary:	QR Code encoder into PNG image
 Name:		qrencode
