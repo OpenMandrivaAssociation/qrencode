@@ -1,4 +1,4 @@
-%define major 3
+%define major 4
 %define libname %mklibname %{name} %{major}
 %define devname %mklibname -d %{name}
 %define _disable_rebuild_configure 1
