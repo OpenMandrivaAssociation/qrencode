@@ -9,8 +9,8 @@ Version:	4.0.0
 Release:	1
 Group:		File tools
 License:	LGPLv2+
-Url:		http://megaui.net/fukuchi/works/qrencode/index.en.html
-Source0:	http://megaui.net/fukuchi/works/qrencode/%{name}-%{version}.tar.bz2
+Url:		http://fukuchi.org/works/qrencode
+Source0:	http://fukuchi.org/works/qrencode/%{name}-%{version}.tar.bz2
 BuildRequires:	doxygen
 BuildRequires:	libtool
 BuildRequires:	pkgconfig(libpng)
