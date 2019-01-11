@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   qrencode-4.0.0.tar.bz2: 8357b22c23650d839aabbfd898b8b61aa1095403
+sources:
+  qrencode-4.0.2.tar.bz2: aa4ed7d87fb5bce3b2078ecf3a1472e78f1d3041
