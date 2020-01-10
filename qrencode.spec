@@ -43,7 +43,7 @@ This package contains the development files for the qrencode library.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %configure \
