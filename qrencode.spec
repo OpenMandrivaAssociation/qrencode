@@ -9,7 +9,7 @@ Version:	4.1.1
 Release:	2
 Group:		File tools
 License:	LGPLv2+
-Url:		http://fukuchi.org/works/qrencode
+Url:		https://fukuchi.org/works/qrencode
 Source0:	http://fukuchi.org/works/qrencode/%{name}-%{version}.tar.bz2
 BuildRequires:	doxygen
 BuildRequires:	libtool
