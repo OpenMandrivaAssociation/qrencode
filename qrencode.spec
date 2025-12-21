@@ -11,6 +11,11 @@ Group:		File tools
 License:	LGPLv2+
 Url:		https://fukuchi.org/works/qrencode
 Source0:	http://fukuchi.org/works/qrencode/%{name}-%{version}.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	doxygen
 BuildRequires:	libtool
 BuildRequires:	pkgconfig(libpng)
